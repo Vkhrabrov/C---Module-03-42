@@ -6,7 +6,7 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 20:19:51 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/05/02 19:05:25 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/05/08 21:19:32 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@
 
 class ClapTrap{
 
-	private:
+	protected:
 		std::string _name;
+		std::string _robotType;
 		int _hit_points;
 		int _energy_points;
 		int _attack_damage;
@@ -27,21 +28,18 @@ class ClapTrap{
 	public:
 		ClapTrap();
 		ClapTrap(const std::string &name);
-		~ClapTrap();
+		virtual ~ClapTrap();
 		ClapTrap(const ClapTrap& copy);
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 
+		std::string getType();
 		int getDamage();
 		int getHitPoints();
 		int getEnergyPoints();
 		std::string getName();
-		void setName(std::string name);
-
-		// ClapTrap operator+(const ClapTrap& src);
-		// ClapTrap operator-(const ClapTrap& src);
-		// bool operator==(const ClapTrap& src) const;
+	ClapTrap &operator=(const ClapTrap &src);
 };
 
 #endif

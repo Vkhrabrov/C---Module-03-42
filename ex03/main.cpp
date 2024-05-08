@@ -6,7 +6,7 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 20:19:14 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/05/06 22:58:47 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/05/08 21:22:45 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,12 +74,14 @@ int main(void){
 	{
 		DiamondTrap a;
 		a.whoAmI();
+		DiamondTrap b("Bobby");
+		b.whoAmI();
 		// for (int i = 4; i > 0; i--)
 		// 	a.attack("a dusty and empty bottle of wine");
 		// std::cout << std::endl;
-		// a.beRepaired(2);
+		a.beRepaired(2);
 		// std::cout << std::endl;
-		// a.takeDamage(5);
+		b.takeDamage(5);
 		// std::cout << std::endl;
 		// a.highFivesGuys();
 		// std::cout << std::endl;

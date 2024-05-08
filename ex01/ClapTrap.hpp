@@ -6,7 +6,7 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 20:19:51 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/05/04 18:55:40 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/05/08 21:19:32 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,7 @@ class ClapTrap{
 		int getHitPoints();
 		int getEnergyPoints();
 		std::string getName();
-		void setName(std::string name);
-
-		// ClapTrap operator+(const ClapTrap& src);
-		// ClapTrap operator-(const ClapTrap& src);
-		// bool operator==(const ClapTrap& src) const;
+	ClapTrap &operator=(const ClapTrap &src);
 };
 
 #endif

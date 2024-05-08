@@ -6,7 +6,7 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 20:19:54 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/05/06 22:28:46 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/05/08 21:19:01 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,14 @@
 
 ClapTrap::ClapTrap(){
 	std::cout << "The default ClapTrap constructor has been called" << std::endl;
+	_name = "John Doe";
+	_robotType = "ClapTrap";
+	_hit_points = 10;
+	_energy_points = 10;
+	_attack_damage = 0;
 }
 
-ClapTrap::ClapTrap(const std::string &name) : _name(name), _robotType("ClapTrap"), _hit_points(10), _energy_points(3), _attack_damage(0){
+ClapTrap::ClapTrap(const std::string &name) : _name(name), _robotType("ClapTrap"), _hit_points(10), _energy_points(10), _attack_damage(0){
 	std::cout << "The name ClapTrap constructor has been called" << std::endl;
 }
 
@@ -48,9 +53,9 @@ std::string ClapTrap::getType(){
 	return this->_robotType;
 }
 
-void ClapTrap::setName(std::string name){
-	_name = name;
-}
+// void ClapTrap::setName(std::string name){
+// 	_name = name;
+// }
 
 void ClapTrap::attack(const std::string& target){
 	if (this->getEnergyPoints() > 0){

@@ -6,7 +6,7 @@
 #    By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/01 20:19:00 by vkhrabro          #+#    #+#              #
-#    Updated: 2024/05/06 22:07:22 by vkhrabro         ###   ########.fr        #
+#    Updated: 2024/05/08 21:08:13 by vkhrabro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = FragTrap 
+NAME = DiamondTrap 
 
 all: $(NAME)
 

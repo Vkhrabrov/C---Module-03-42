@@ -6,14 +6,18 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 17:28:07 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/05/06 22:27:35 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/05/08 21:13:32 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() {
+FragTrap::FragTrap() : ClapTrap("John Doe"){
 	std::cout << "The default FragTrap constructor is has been called" << std::endl;
+	this->_hit_points = 100;
+	this->_energy_points = 100;
+	this->_attack_damage = 30;
+	this->_robotType = "FragTrap";
 }
 
 FragTrap::FragTrap(const std::string &name) : ClapTrap(name) {

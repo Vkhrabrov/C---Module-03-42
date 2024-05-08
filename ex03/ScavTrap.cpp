@@ -6,14 +6,18 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 19:24:50 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/05/06 22:29:51 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/05/08 21:15:00 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() : _guardGate(false) {
+ScavTrap::ScavTrap() : ClapTrap("John Doe") {
 	std::cout << "The default ScavTrap constructor has been called" << std::endl;
+	_hit_points = 100;
+	_energy_points = 50;
+	_attack_damage = 20;
+	_guardGate = false;
 }
 
 ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name) {

@@ -6,18 +6,23 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 20:19:54 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/05/04 19:17:32 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/05/08 21:19:01 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(){
-	std::cout << "The constructor for ClapTrap has been called" << std::endl;
+	std::cout << "The default ClapTrap constructor has been called" << std::endl;
+	_name = "John Doe";
+	_robotType = "ClapTrap";
+	_hit_points = 10;
+	_energy_points = 10;
+	_attack_damage = 0;
 }
 
-ClapTrap::ClapTrap(const std::string &name) : _name(name), _robotType("ClapTrap"), _hit_points(10), _energy_points(3), _attack_damage(0){
-	std::cout << "The name constructor for ClapTrap has been called" << std::endl;
+ClapTrap::ClapTrap(const std::string &name) : _name(name), _robotType("ClapTrap"), _hit_points(10), _energy_points(10), _attack_damage(0){
+	std::cout << "The name ClapTrap constructor has been called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy){
@@ -48,9 +53,9 @@ std::string ClapTrap::getType(){
 	return this->_robotType;
 }
 
-void ClapTrap::setName(std::string name){
-	_name = name;
-}
+// void ClapTrap::setName(std::string name){
+// 	_name = name;
+// }
 
 void ClapTrap::attack(const std::string& target){
 	if (this->getEnergyPoints() > 0){
@@ -84,4 +89,13 @@ void ClapTrap::beRepaired(unsigned int amount){
 		std::cout << "No healing is possible, " << this->getType() << " is dead" << std::endl;
 	else 
 		std::cout << "There's not enough energy to perform the repair process" << std::endl;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &src){
+	std::cout << "Assignation operator called" << std::endl;
+	this->_name = src._name;
+	this->_hit_points = src._hit_points;
+	this->_energy_points = src._energy_points;
+	this->_attack_damage = src._attack_damage;
+	return *this;
 }
