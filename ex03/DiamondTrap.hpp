@@ -6,7 +6,7 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 19:58:21 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/05/06 22:04:42 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/05/15 22:39:04 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "FragTrap.hpp"
 
-class DiamondTrap : public FragTrap, ScavTrap{
+class DiamondTrap : public FragTrap, public ScavTrap{
 
 	private: 
 		std::string _name;

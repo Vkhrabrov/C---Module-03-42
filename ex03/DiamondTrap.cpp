@@ -6,7 +6,7 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 19:58:24 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/05/08 21:23:43 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/05/16 21:04:19 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,20 @@ void DiamondTrap::attack(std::string object){
 
 DiamondTrap::DiamondTrap() : ClapTrap("John_Doe_clap_trap"){
 	std::cout << "The default DiamondTrap constructor has been called" << std::endl;
-	this->_name = "John_Doe";
-	this->_hit_points = FragTrap::_hit_points;
-	this->_energy_points = ScavTrap::_energy_points;
-	this->_attack_damage = FragTrap::_hit_points;
-	this->_robotType = "DiamondTrap";
+	DiamondTrap::_name = "John_Doe";
+	DiamondTrap::_hit_points = FragTrap::_hit_points;
+	DiamondTrap::_energy_points = ScavTrap::_energy_points;
+	DiamondTrap::_attack_damage = FragTrap::_attack_damage;
+	DiamondTrap::_robotType = "DiamondTrap";
 }
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_trap"){
 	std::cout << "DiamondTrap Name Constructor called" << std::endl;
-	this->_name = name;
-	this->_hit_points = FragTrap::_hit_points;
-	this->_energy_points = ScavTrap::_energy_points;
-	this->_attack_damage = FragTrap::_hit_points;
-	this->_robotType = "DiamondTrap";
+	DiamondTrap::_name = name;
+	DiamondTrap::_hit_points = FragTrap::_hit_points;
+	DiamondTrap::_energy_points = ScavTrap::_energy_points;
+	DiamondTrap::_attack_damage = FragTrap::_attack_damage;
+	DiamondTrap::_robotType = "DiamondTrap";
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &copy){

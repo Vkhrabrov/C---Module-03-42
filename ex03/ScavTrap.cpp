@@ -6,7 +6,7 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 19:24:50 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/05/08 21:15:00 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/05/16 21:04:44 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 ScavTrap::ScavTrap() : ClapTrap("John Doe") {
 	std::cout << "The default ScavTrap constructor has been called" << std::endl;
-	_hit_points = 100;
-	_energy_points = 50;
-	_attack_damage = 20;
-	_guardGate = false;
+	ScavTrap::_hit_points = 100;
+	ScavTrap::_energy_points = 50;
+	ScavTrap::_attack_damage = 20;
+	ScavTrap::_guardGate = false;
 }
 
 ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name) {
 	std::cout << "The name constructor for ScavTrap has been called" << std::endl;
-	_hit_points = 100;
-	_energy_points = 50;
-	_attack_damage = 20;
-	_robotType = "ScavTrap";
+	ScavTrap::_hit_points = 100;
+	ScavTrap::_energy_points = 50;
+	ScavTrap::_attack_damage = 20;
+	ScavTrap::_robotType = "ScavTrap";
 }
 
 ScavTrap::ScavTrap(const ScavTrap &copy){

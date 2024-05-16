@@ -6,7 +6,7 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 20:19:54 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/05/08 21:19:01 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/05/15 22:44:01 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 ClapTrap::ClapTrap(){
 	std::cout << "The default ClapTrap constructor has been called" << std::endl;
-	_name = "John Doe";
-	_robotType = "ClapTrap";
-	_hit_points = 10;
-	_energy_points = 10;
-	_attack_damage = 0;
+	this->_name = "John Doe";
+	this->_robotType = "ClapTrap";
+	this->_hit_points = 10;
+	this->_energy_points = 10;
+	this->_attack_damage = 0;
 }
 
 ClapTrap::ClapTrap(const std::string &name) : _name(name), _robotType("ClapTrap"), _hit_points(10), _energy_points(10), _attack_damage(0){
